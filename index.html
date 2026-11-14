@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocAju — Use o sistema. O manual se escreve.</title>
+  <meta name="description" content="O DocAju registra suas ações no navegador e transforma cada clique em um passo com captura de tela. Revise, ajuste e exporte manuais em PDF, slides ou Markdown.">
+  <meta name="theme-color" content="#022E60">
+  <meta property="og:title" content="DocAju — Use o sistema. O manual se escreve.">
+  <meta property="og:description" content="Crie manuais, tutoriais e guias de usuário a partir das suas próprias ações no navegador.">
+  <meta property="og:image" content="assets/brand/docaju-logo.png">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__brand" href="#topo" aria-label="DocAju, início">
+        <img src="assets/brand/docaju-logo.png" alt="DocAju" width="122" height="47">
+      </a>
+      <nav class="nav__links" aria-label="Seções">
+        <a href="#objetivo">Objetivo</a>
+        <a href="#diferencial">Diferencial</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#pitch">Pitch</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn--sm btn--primary nav__cta" href="#contato">Fale conosco</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+        <span class="sr-only">Abrir menu</span>
+        <span class="nav__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="nav__sheet" id="menu-mobile" data-menu hidden>
+      <a href="#objetivo">Objetivo</a>
+      <a href="#diferencial">Diferencial</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#pitch">Pitch</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="topo">
+      <div class="hero__grid container">
+        <div class="hero__copy">
+          <p class="eyebrow reveal" style="--i:0">Departamento de Computação · UFS</p>
+          <h1 class="hero__title">
+            <span class="reveal" style="--i:1">Use o sistema.</span>
+            <span class="reveal hero__title-accent" style="--i:2">O manual se escreve.</span>
+          </h1>
+          <p class="hero__lead reveal" style="--i:3">
+            O DocAju registra suas ações no navegador e transforma cada clique em um passo com captura de tela.
+            Você revisa, ajusta e exporta em PDF, slides ou Markdown.
+          </p>
+          <div class="hero__actions reveal" style="--i:4">
+            <a class="btn btn--primary" href="#pitch">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5-7-4.5z" fill="currentColor"/></svg>
+              Assistir ao pitch
+            </a>
+            <a class="btn btn--ghost" href="#funcionalidades">Ver funcionalidades</a>
+          </div>
+          <ul class="hero__facts reveal" style="--i:5" aria-label="Destaques">
+            <li>Extensão de navegador</li>
+            <li>Aplicação web</li>
+            <li>PDF, slides e Markdown</li>
+          </ul>
+        </div>
+
+        <div class="demo reveal" style="--i:3" data-demo aria-label="Demonstração: cada clique no sistema vira um passo do manual" role="img">
+          <div class="demo__browser">
+            <div class="demo__bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="demo__url">portal.instituicao.br/matricula</span>
+              <span class="demo__rec" data-demo-rec><i></i>Gravando</span>
+            </div>
+            <div class="demo__app" data-demo-stage>
+              <aside class="demo__side">
+                <span class="demo__logo"></span>
+                <span class="demo__menu">Início</span>
+                <span class="demo__menu" data-target="menu">Matrícula</span>
+                <span class="demo__menu">Notas</span>
+                <span class="demo__menu">Documentos</span>
+              </aside>
+              <div class="demo__content">
+                <p class="demo__h">Solicitar matrícula</p>
+                <label class="demo__label">Período</label>
+                <div class="demo__input" data-target="input"><span data-demo-typed></span><i class="demo__caret"></i></div>
+                <label class="demo__label">Turma</label>
+                <div class="demo__input demo__input--muted">Engenharia de Software I</div>
+                <span class="demo__btn" data-target="button">Confirmar</span>
+              </div>
+              <span class="demo__ring" data-demo-ring aria-hidden="true"></span>
+              <svg class="demo__cursor" data-demo-cursor width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 3l14 7.5-6.2 1.6L9.6 18 5 3z" fill="#0B1B2E" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="demo__manual">
+            <div class="demo__manual-head">
+              <img src="assets/brand/docaju-mark.png" alt="" width="20" height="20">
+              <div>
+                <p class="demo__manual-title">Como solicitar matrícula</p>
+                <p class="demo__manual-sub"><span data-demo-count>0</span> passos registrados</p>
+              </div>
+            </div>
+            <ol class="demo__steps" data-demo-steps></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section objetivo" id="objetivo">
+      <div class="container objetivo__grid">
+        <div>
+          <p class="eyebrow reveal">Objetivo</p>
+          <h2 class="h2 reveal" style="--i:1">Documentar não deveria ser a parte difícil.</h2>
+        </div>
+        <div class="objetivo__body">
+          <p class="reveal" style="--i:1">
+            O DocAju facilita a criação de manuais, tutoriais e guias de usuário para aplicações web.
+            Ele atende à necessidade de documentar procedimentos de forma clara e organizada, reduzindo
+            tarefas repetitivas como registrar imagens de cada etapa e redigir instruções a partir do zero.
+          </p>
+          <p class="reveal" style="--i:2">
+            Quem conhece o processo só precisa <em>executá-lo uma vez</em>. O resto vira material de orientação que
+            pode ser revisado, versionado e compartilhado.
+          </p>
+          <ul class="usos reveal" style="--i:3" aria-label="Onde o DocAju ajuda">
+            <li><span>01</span>Treinamentos</li>
+            <li><span>02</span>Integração de novos usuários</li>
+            <li><span>03</span>Suporte técnico</li>
+            <li><span>04</span>Documentação interna</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section diferencial" id="diferencial">
+      <div class="container">
+        <div class="diferencial__head">
+          <p class="eyebrow eyebrow--light reveal">Diferencial</p>
+          <h2 class="h2 h2--light reveal" style="--i:1">Do uso ao manual, sem começar do zero.</h2>
+          <p class="diferencial__lead reveal" style="--i:2">
+            O DocAju transforma a utilização de um sistema em documentação. Sem capturas de tela feitas à mão,
+            sem colar imagens, sem página em branco.
+          </p>
+        </div>
+
+        <ol class="fluxo">
+          <li class="fluxo__item reveal" style="--i:0">
+            <span class="fluxo__n">01</span>
+            <div class="fluxo__art" aria-hidden="true">
+              <span class="art-rec"><i></i></span>
+            </div>
+            <h3>Grave</h3>
+            <p>Ative a extensão e faça a tarefa normalmente. Cada clique, campo preenchido e rolagem vira um passo, com a captura da tela e o ponto do clique marcado.</p>
+          </li>
+          <li class="fluxo__item reveal" style="--i:1">
+            <span class="fluxo__n">02</span>
+            <div class="fluxo__art" aria-hidden="true">
+              <span class="art-edit"><i></i><i></i><i></i></span>
+            </div>
+            <h3>Revise</h3>
+            <p>Ajuste títulos e descrições, acrescente anotações aos passos e personalize a conclusão e os contatos de atendimento.</p>
+          </li>
+          <li class="fluxo__item reveal" style="--i:2">
+            <span class="fluxo__n">03</span>
+            <div class="fluxo__art" aria-hidden="true">
+              <span class="art-files"><i>PDF</i><i>PPTX</i><i>MD</i></span>
+            </div>
+            <h3>Publique e mantenha</h3>
+            <p>Exporte em PDF, slides ou Markdown. Cada alteração fica no histórico, e você compara versões antes de restaurar uma delas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section funcs" id="funcionalidades">
+      <div class="container">
+        <div class="funcs__head">
+          <div>
+            <p class="eyebrow reveal">Funcionalidades</p>
+            <h2 class="h2 reveal" style="--i:1">Tudo o que um manual precisa.</h2>
+          </div>
+          <div class="carousel__controls reveal" style="--i:2">
+            <span class="carousel__count" aria-live="polite"><b data-car-current>01</b> / <span data-car-total>05</span></span>
+            <button class="icon-btn" type="button" data-car-prev aria-label="Funcionalidade anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="icon-btn" type="button" data-car-next aria-label="Próxima funcionalidade">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel reveal" style="--i:2" data-carousel>
+        <div class="carousel__track" data-car-track tabindex="0" aria-roledescription="carrossel" aria-label="Funcionalidades do DocAju">
+
+          <article class="slide" aria-roledescription="slide" aria-label="1 de 5">
+            <div class="slide__text">
+              <span class="slide__tag">Extensão</span>
+              <h3>Captura automática enquanto você trabalha</h3>
+              <p>Cliques, preenchimentos e rolagens viram passos com descrição gerada e captura de tela, com o ponto do clique destacado. Campos sensíveis, como senhas, não têm o valor registrado.</p>
+            </div>
+            <div class="slide__media mock mock--ext" aria-hidden="true">
+              <div class="mock__page">
+                <span class="mock__line w60"></span><span class="mock__line w40"></span>
+                <span class="mock__field"></span><span class="mock__field"></span>
+                <span class="mock__cta"></span>
+                <span class="mock__marker" style="left:30%;top:66%"></span>
+              </div>
+              <div class="mock__panel">
+                <div class="mock__panel-head"><img src="assets/brand/docaju-mark.png" alt="" width="16" height="16">DocAju</div>
+                <span class="mock__rec"><i></i>Gravando · 3 passos</span>
+                <div class="mock__step"><b>1</b>Clique em "Entrar"</div>
+                <div class="mock__step"><b>2</b>Preencha o campo "Senha" com uma informação sensível</div>
+                <div class="mock__step mock__step--new"><b>3</b>Clique em "Acessar painel"</div>
+                <span class="mock__btn">Enviar ao manual</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" aria-roledescription="slide" aria-label="2 de 5">
+            <div class="slide__text">
+              <span class="slide__tag">Editor</span>
+              <h3>Passos claros, do jeito da sua equipe</h3>
+              <p>Edite títulos e descrições com texto formatado, acrescente anotações em cada passo e feche o manual com uma conclusão e os contatos de atendimento. Alterações não salvas geram aviso antes de sair.</p>
+            </div>
+            <div class="slide__media mock mock--editor" aria-hidden="true">
+              <div class="mock__doc">
+                <p class="mock__doc-title">Como emitir o histórico escolar</p>
+                <div class="mock__toolbar"><b>B</b><i>I</i><span></span></div>
+                <div class="mock__card">
+                  <span class="mock__num">2</span>
+                  <div>
+                    <p class="mock__card-title">Abra a aba <b>Documentos</b></p>
+                    <p class="mock__card-text">No menu lateral, clique em Documentos para ver as opções disponíveis.</p>
+                    <div class="mock__shot"><span class="mock__marker" style="left:22%;top:40%"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mock__note">
+                <p class="mock__note-head">Anotação</p>
+                <p>O documento fica disponível em até 24 horas.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" aria-roledescription="slide" aria-label="3 de 5">
+            <div class="slide__text">
+              <span class="slide__tag">Colaboração</span>
+              <h3>Workspaces para organizar e dividir o trabalho</h3>
+              <p>Agrupe manuais em espaços de trabalho, convide membros por e-mail, defina permissões e veja quem editou cada manual. A busca encontra manuais por nome e por tags, mesmo sem acentos.</p>
+            </div>
+            <div class="slide__media mock mock--ws" aria-hidden="true">
+              <div class="mock__ws-head">
+                <p>Secretaria Acadêmica</p>
+                <span class="mock__avatars"><i>BS</i><i>PF</i><i>SR</i><i>+4</i></span>
+              </div>
+              <div class="mock__search">Buscar por nome ou tag</div>
+              <div class="mock__grid">
+                <div class="mock__mcard"><span class="tag tag--blue">matrícula</span><p>Solicitar matrícula</p><small>Editado por Davi</small></div>
+                <div class="mock__mcard"><span class="tag tag--green">documentos</span><p>Emitir histórico</p><small>Editado por Suzyane</small></div>
+                <div class="mock__mcard"><span class="tag tag--amber">acesso</span><p>Recuperar senha</p><small>Editado por João</small></div>
+                <div class="mock__mcard"><span class="tag tag--blue">matrícula</span><p>Trancar disciplina</p><small>Editado por Lucas</small></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" aria-roledescription="slide" aria-label="4 de 5">
+            <div class="slide__text">
+              <span class="slide__tag">Versões</span>
+              <h3>Histórico completo, com comparação antes de restaurar</h3>
+              <p>Salve versões do manual, identifique a versão atual e veja a prévia de uma versão anterior. Antes de restaurar, compare o conteúdo e saiba exatamente o que vai mudar.</p>
+            </div>
+            <div class="slide__media mock mock--ver" aria-hidden="true">
+              <ul class="mock__versions">
+                <li class="is-current"><b>v4</b><span>Revisão final</span><em>Atual</em></li>
+                <li class="is-selected"><b>v3</b><span>Novos passos</span></li>
+                <li><b>v2</b><span>Ajuste de títulos</span></li>
+              </ul>
+              <div class="mock__diff">
+                <p class="mock__diff-head">v3 comparada à versão atual</p>
+                <p class="del">− Clique em "Enviar".</p>
+                <p class="add">+ Clique em "Confirmar".</p>
+                <p>  Aguarde a confirmação.</p>
+                <p class="add">+ Anote o protocolo.</p>
+                <span class="mock__btn">Restaurar v3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="slide" aria-roledescription="slide" aria-label="5 de 5">
+            <div class="slide__text">
+              <span class="slide__tag">Exportação</span>
+              <h3>Um manual, três formatos</h3>
+              <p>Gere um PDF pronto para impressão, uma apresentação de slides para treinamentos ou Markdown para a sua base de conhecimento, sempre a partir do mesmo conteúdo.</p>
+            </div>
+            <div class="slide__media mock mock--exp" aria-hidden="true">
+              <div class="mock__file mock__file--pdf"><span>PDF</span><i></i><i></i><i></i></div>
+              <div class="mock__file mock__file--ppt"><span>Slides</span><i></i><i></i></div>
+              <div class="mock__file mock__file--md"><span>Markdown</span><code># Como solicitar matrícula</code><code>1. Clique em **Matrícula**</code></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="carousel__progress" data-car-dots role="tablist" aria-label="Escolher funcionalidade"></div>
+      </div>
+    </section>
+
+    <section class="section pitch" id="pitch">
+      <div class="container pitch__inner">
+        <p class="eyebrow eyebrow--light reveal">Pitch</p>
+        <h2 class="h2 h2--light reveal" style="--i:1">Conheça o DocAju em poucos minutos.</h2>
+        <div class="video reveal" style="--i:2" data-video data-youtube="">
+          <button class="video__play" type="button" data-video-play aria-label="Reproduzir vídeo do pitch">
+            <svg width="28" height="28" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5-7-4.5z" fill="currentColor"/></svg>
+          </button>
+          <p class="video__soon" data-video-soon>Vídeo do pitch em breve</p>
+          <img class="video__mark" src="assets/brand/docaju-logo-white.png" alt="" width="280" height="106">
+        </div>
+      </div>
+    </section>
+
+    <section class="section equipe" id="equipe">
+      <div class="container">
+        <p class="eyebrow reveal">Equipe</p>
+        <h2 class="h2 reveal" style="--i:1">Quem faz o DocAju.</h2>
+
+        <h3 class="group-title reveal">Desenvolvedores</h3>
+        <ul class="people people--devs">
+          <li class="person reveal" style="--i:0" data-foto="bruno"><span class="person__avatar" data-initials="BS"></span><p class="person__name">Bruno Saint Clair</p><p class="person__role">Back-end</p></li>
+          <li class="person reveal" style="--i:1" data-foto="davi"><span class="person__avatar" data-initials="DC"></span><p class="person__name">Davi Corrêa</p><p class="person__role">Back-end e Front-end</p></li>
+          <li class="person reveal" style="--i:2" data-foto="joao"><span class="person__avatar" data-initials="JM"></span><p class="person__name">João Victor Moura</p><p class="person__role">Back-end</p></li>
+          <li class="person reveal" style="--i:3" data-foto="lucas"><span class="person__avatar" data-initials="LC"></span><p class="person__name">Lucas Celestino</p><p class="person__role">Full-stack</p></li>
+          <li class="person reveal" style="--i:4" data-foto="pablo"><span class="person__avatar" data-initials="PF"></span><p class="person__name">Pablo Freire</p><p class="person__role">Full-stack e Extensão</p></li>
+          <li class="person reveal" style="--i:5" data-foto="suzyane"><span class="person__avatar" data-initials="SR"></span><p class="person__name">Suzyane Rocha</p><p class="person__role">Front-end</p></li>
+          <li class="person reveal" style="--i:6" data-foto="vinicius"><span class="person__avatar" data-initials="VS"></span><p class="person__name">Vinícius Souza</p><p class="person__role">Front-end</p></li>
+        </ul>
+
+        <div class="equipe__split">
+          <div>
+            <h3 class="group-title reveal">Consultoria técnica</h3>
+            <ul class="people">
+              <li class="person reveal" style="--i:0" data-foto="giovanny"><span class="person__avatar" data-initials="GL"></span><p class="person__name">Prof. Giovanny Lucero</p><p class="person__role">DCOMP · UFS</p></li>
+              <li class="person reveal" style="--i:1" data-foto="edilayne"><span class="person__avatar" data-initials="ES"></span><p class="person__name">Profa. Edilayne Salgueiro</p><p class="person__role">DCOMP · UFS</p></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="group-title reveal">Especialista do domínio</h3>
+            <ul class="people">
+              <li class="person reveal" style="--i:0" data-foto="po"><span class="person__avatar" data-initials="PO"></span><p class="person__name">Nome do PO</p><p class="person__role">Product Owner</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contato" id="contato">
+      <div class="container">
+      <div class="contato__card reveal">
+        <div>
+          <h2 class="h2">Quer levar o DocAju para a sua instituição?</h2>
+          <p>Fale com a equipe do projeto.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="mailto:docaju@dcomp.ufs.br">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          docaju@dcomp.ufs.br
+        </a>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img class="footer__docaju" src="assets/brand/docaju-logo.png" alt="DocAju" width="136" height="52">
+        <p class="footer__tagline">Use o sistema. O manual se escreve.</p>
+      </div>
+      <div class="footer__inst">
+        <span class="footer__label">Realização</span>
+        <div class="footer__logos">
+          <img class="footer__ufs" src="assets/brand/ufs-principal.png" alt="Universidade Federal de Sergipe" width="97" height="80">
+          <img class="footer__dcomp" src="assets/brand/dcomp-horizontal.png" alt="Departamento de Computação da UFS" width="120" height="60">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer__legal">
+        <p>© 2026 DocAju. Todos os direitos reservados.</p>
+        <p>Projeto desenvolvido no Departamento de Computação da Universidade Federal de Sergipe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
