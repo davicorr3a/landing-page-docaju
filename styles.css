@@ -266,7 +266,7 @@ button { font: inherit; color: inherit; }
   position: relative;
   padding-top: clamp(40px, 7vw, 88px);
   padding-bottom: clamp(24px, 4vw, 48px);
-  overflow: clip;
+  overflow: hidden;
 }
 .hero::before {
   content: "";
@@ -588,7 +588,7 @@ button { font: inherit; color: inherit; }
   position: relative;
   background: var(--navy);
   color: #c9d8ea;
-  overflow: clip;
+  overflow: hidden;
 }
 .diferencial::before {
   content: "";
@@ -671,7 +671,7 @@ button { font: inherit; color: inherit; }
 }
 .art-files i:nth-child(2) { transform: translateY(-8px); background: rgb(143 189 245 / 0.22); }
 
-.funcs { overflow: clip; }
+.funcs { overflow: hidden; }
 .funcs__head {
   display: flex;
   align-items: end;
@@ -1154,7 +1154,7 @@ button { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--muted);
 }
-.footer__logos { display: flex; align-items: center; gap: 48px; }
+.footer__logos { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 48px; }
 .footer__ufs { height: 80px; width: auto; }
 .footer__dcomp { height: 60px; width: auto; }
 .footer__legal {
@@ -1207,56 +1207,73 @@ button { font: inherit; color: inherit; }
   .fluxo { grid-template-columns: minmax(0, 1fr); }
   .equipe__split { grid-template-columns: minmax(0, 1fr); }
   .contato__card { flex-direction: column; align-items: flex-start; }
+  .footer__inner { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
+
+  .hero { padding-top: 32px; padding-bottom: 8px; }
+  .hero__grid { gap: 40px; }
+  .hero__title { font-size: clamp(2rem, 9.6vw, 2.75rem); line-height: 1.05; letter-spacing: -0.04em; }
+  .hero__lead { margin-top: 18px; font-size: 17px; }
+  .hero__actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 28px; }
+  .hero__actions .btn { width: 100%; height: 52px; }
+  .hero__facts { gap: 8px; margin-top: 24px; font-size: 13.5px; }
+  .hero__facts li { padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+  .hero__facts li::before { display: none; }
+
   .demo { padding-bottom: 0; }
   .demo__browser { width: 100%; }
   .demo__app { grid-template-columns: 1fr; min-height: 250px; }
   .demo__side { display: none; }
   .demo__manual { position: relative; width: 90%; margin: -36px 0 0 auto; }
   .demo__steps { min-height: 112px; }
-  .people, .people--devs,
-  .equipe__split > div:first-child .people,
-  .equipe__split > div:last-child .people { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 12px; }
-  .person__avatar { border-radius: 14px; font-size: 22px; }
-  .person__name { font-size: 14px; }
-  .person__role { font-size: 12.5px; }
   .demo__url { font-size: 10.5px; }
+
+  .usos { grid-template-columns: minmax(0, 1fr); }
+  .usos li:nth-child(odd) { padding-right: 0; }
+
   .funcs__head { flex-direction: column; align-items: flex-start; }
   .carousel__controls { width: 100%; }
   .carousel__count { margin-right: auto; }
   .carousel__track { gap: 12px; }
   .mock { height: 340px; padding: 16px; font-size: 11.5px; }
-  .mock__grid .mock__mcard:nth-child(n + 3) { display: none; }
-  .mock__shot { height: 64px; }
-  .mock__diff p:nth-of-type(4) { display: none; }
+  .mock__page { width: 70%; height: 230px; padding: 16px; }
+  .mock__panel { width: 62%; margin-left: -32%; }
+  .mock__panel-head, .mock__rec { font-size: 11px; }
+  .mock__step { padding: 6px; }
+  .mock__note { width: 56%; right: 12px; bottom: 14px; }
+  .mock__doc { width: 100%; }
   .mock__toolbar { display: none; }
   .mock__card-title { margin-top: 10px; }
+  .mock__shot { height: 64px; }
+  .mock__grid .mock__mcard:nth-child(n + 3) { display: none; }
+  .mock--ver { grid-template-columns: minmax(0, 1fr); }
+  .mock__versions { display: none; }
+  .mock__diff p:nth-of-type(4) { display: none; }
+  .mock__file { width: 31%; padding: 10px; }
+
+  .video__mark { width: 84px; left: 16px; bottom: 14px; }
+  .video__play { width: 64px; height: 64px; }
+  .video__soon { top: calc(50% + 50px); }
+
+  .people, .people--devs,
+  .equipe__split > div:first-child .people,
+  .equipe__split > div:last-child .people { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 12px; }
+  .people--devs .person:nth-child(n) { max-width: none; }
+  .person__avatar { border-radius: 14px; font-size: 22px; }
+  .person__name { font-size: 14px; }
+  .person__role { font-size: 12.5px; }
+
+  .contato__card .btn { width: 100%; font-size: 16px; }
+  .footer__logos { gap: 40px; }
 }
 
 @media (max-width: 400px) {
   .mock { height: 360px; }
   .mock__diff p:nth-of-type(5) { display: none; }
   .mock__card-text { display: none; }
-  .mock__page { width: 70%; height: 230px; padding: 16px; }
-  .mock__panel { width: 62%; margin-left: -32%; }
-  .mock__note { width: 56%; right: 12px; bottom: 14px; }
-  .mock__doc { width: 100%; }
-  .mock--ver { grid-template-columns: minmax(0, 1fr); }
-  .mock__versions { display: none; }
-  .mock__panel-head, .mock__rec { font-size: 11px; }
-  .mock__step { padding: 6px; }
-  .mock__file { width: 31%; padding: 10px; }
-  .usos { grid-template-columns: minmax(0, 1fr); }
-  .usos li:nth-child(odd) { padding-right: 0; }
-  .people--devs .person:nth-child(n) { max-width: none; }
-  .contato__card .btn { width: 100%; font-size: 16px; }
-  .footer__inner { flex-direction: column; align-items: flex-start; }
-  .video__mark { width: 84px; left: 16px; bottom: 14px; }
-  .video__play { width: 64px; height: 64px; }
-  .video__soon { top: calc(50% + 50px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

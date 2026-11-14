@@ -139,6 +139,7 @@ if (demo) {
   const typed = demo.querySelector("[data-demo-typed]");
   const list = demo.querySelector("[data-demo-steps]");
   const count = demo.querySelector("[data-demo-count]");
+  const setCount = (n) => { count.textContent = n === 0 ? "Nenhum passo registrado" : n === 1 ? "1 passo registrado" : `${n} passos registrados`; };
   const menuItem = demo.querySelector('[data-target="menu"]');
   const input = demo.querySelector('[data-target="input"]');
   const button = demo.querySelector('[data-target="button"]');
@@ -203,7 +204,7 @@ if (demo) {
     li.className = "demo__step";
     li.innerHTML = `<span class="demo__thumb" style="--x:${((p.x / s.width) * 100).toFixed(1)}%;--y:${((p.y / s.height) * 100).toFixed(1)}%"></span><span>${html}</span>`;
     list.append(li);
-    count.textContent = list.children.length;
+    setCount(list.children.length);
     if (animate) {
       li.animate(
         [
@@ -230,7 +231,7 @@ if (demo) {
       { duration: 260, delay: i * 40, easing: EASE_OUT, fill: "forwards" }
     ).finished));
     list.replaceChildren();
-    count.textContent = "0";
+    setCount(0);
     typed.textContent = "";
     menuItem.classList.remove("is-active");
     input.classList.remove("is-focused");
