@@ -1091,8 +1091,12 @@ button { font: inherit; color: inherit; }
 }
 .person__avatar::before { content: attr(data-initials); }
 .person__avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.person__name { margin-top: 14px; font-weight: 500; font-size: 16px; line-height: 1.3; color: var(--ink); }
+.person__name { margin-top: 14px; min-height: 2.6em; font-weight: 500; font-size: 16px; line-height: 1.3; color: var(--ink); }
 .person__role { margin-top: 2px; font-size: 14px; color: var(--muted); }
+.person__github { display: inline-flex; align-items: center; gap: 5px; max-width: 100%; margin-top: 4px; font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.person__github svg { flex: none; }
+.person__github span { min-width: 0; overflow-wrap: anywhere; }
+.person__github:hover { color: var(--blue); text-decoration: underline; }
 .equipe__split {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -1152,7 +1156,7 @@ button { font: inherit; color: inherit; }
   color: var(--muted);
 }
 
-.nav__links a, .person__role, .slide__tag, .carousel__count,
+.nav__links a, .person__role, .person__github, .slide__tag, .carousel__count,
 .video__soon, .demo, .mock, .tag, .usos span, .contato__card p { font-weight: 400; }
 
 .js .reveal {
@@ -1240,11 +1244,11 @@ button { font: inherit; color: inherit; }
 
   .people, .people--devs,
   .equipe__split > div:first-child .people,
-  .equipe__split > div:last-child .people { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 12px; }
+  .equipe__split > div:last-child .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
   .people--devs .person:nth-child(n) { max-width: none; }
   .person__avatar { border-radius: 14px; font-size: 22px; }
   .person__name { font-size: 14px; }
-  .person__role { font-size: 12.5px; }
+  .person__role, .person__github { font-size: 12.5px; }
 
   .contato__card .btn { width: 100%; font-size: 16px; }
   .footer__logos { gap: 40px; }
