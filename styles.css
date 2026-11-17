@@ -1099,13 +1099,12 @@ button { font: inherit; color: inherit; }
 .person__github:hover { color: var(--blue); text-decoration: underline; }
 .equipe__split {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 0 48px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
 }
 .equipe__split .people { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-.equipe__split > div:first-child .people { grid-template-columns: repeat(2, minmax(140px, 200px)); }
-.equipe__split > div:last-child .people { grid-template-columns: minmax(140px, 200px); }
-.people--devs .person:nth-child(n) { max-width: 200px; }
+.people--devs .person:nth-child(n),
+.equipe__split .person { max-width: 200px; }
 
 .contato { padding-top: 0; }
 .contato__card {
@@ -1245,7 +1244,8 @@ button { font: inherit; color: inherit; }
   .people, .people--devs,
   .equipe__split > div:first-child .people,
   .equipe__split > div:last-child .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
-  .people--devs .person:nth-child(n) { max-width: none; }
+  .people--devs .person:nth-child(n),
+  .equipe__split .person { max-width: none; }
   .person__avatar { border-radius: 14px; font-size: 22px; }
   .person__name { font-size: 14px; }
   .person__role, .person__github { font-size: 12.5px; }
